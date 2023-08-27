@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <title>UNEEDS - Home</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link rel="stylesheet" href="Home-2.css">
+	    <script src="https://kit.fontawesome.com/407664f392.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<nav>
+			<input type="checkbox" id="check">
+			<label for="check" class="checkbtn">
+				<i class="fas fa-bars"></i>
+			</label>
+			<a href="Home-2.html"><img src="Assets/Logo-1.png" class="logo"></a>
+			<ul>
+				<li><a href="Home-2.html">Home</a></li>
+				<div class="dropdown">
+					<li><a class="btn">Our Service</a></li>
+					<div class="dropdown-content">
+					    <li><a class="brnch" href="#">Videography</a></li>
+					    <li><a class="brnch" href="#">Graphic Design</a></li>
+					    <li><a class="brnch" href="#">Website</a></li>
+					</div>
+				</div>
+				<li><a href="#">Portofolio</a></li>
+				<li><a href="AboutUs-2.html">About Us</a></li>
+			</ul>
+		</nav>
+
+		<script type="text/javascript">
+			window.addEventListener("scroll", function() {
+				var nav = document.querySelector("nav");
+				nav.classList.toggle("sticky", window.scrollY > 0);
+			})
+		</script>
+
+		<div id="slideshow-container" class="slideshow-container">
+			<div class="slide-item slide fade">
+				<img src="Assets/Slides.png">
+			</div>
+			<div class="slide-item slide fade">
+				<img src="Assets/Slides-2.png">
+			</div>
+			<div class="slide-item slide fade">
+				<img src="Assets/Slides-3.png">
+			</div>
+			<div id="slide-control" class="slide-control">
+				<span class="dot" onclick="chooseSlide(0)"></span>
+				<span class="dot" onclick="chooseSlide(1)"></span>
+				<span class="dot" onclick="chooseSlide(2)"></span>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			var slideIndex = 0;
+
+			showSlide();
+
+			var timer = setInterval(showSlide, 2000);
+
+			var slideContainer = document.getElementById('slideshow-container');
+			var slideControl = document.getElementById('slideshow-container');
+
+			slideContainer.onmouseover = function() {
+				clearInterval(timer);
+			}
+
+			slideControl.onmouseover = function() {
+				clearInterval(timer);
+			}
+
+			slideContainer.onmouseleave = function() {
+				timer = setInterval(showSlide, 2000);
+			}
+
+			slideControl.onmouseleave = function() {
+				timer = setInterval(showSlide, 2000);
+			}
+
+			function showSlide() {
+				var i;
+				var slides = document.getElementsByClassName('slide-item');
+				var dots = document.getElementsByClassName('dot');
+				for (var i = 0; i < slides.length; i++) {
+					slides[i].style.display = 'none';
+				}
+				for (var i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slideIndex++;
+				if (slideIndex > slides.length) slideIndex = 1;
+				slides[slideIndex-1].style.display = "block";
+				dots[slideIndex-1].className += " active";
+			}
+
+			function chooseSlide(n) {
+				slideIndex = n;
+				showSlide();
+				clearInterval(timer);
+			}
+		</script>
+
+		<div class="next reveal">
+			<div class="bg"></div>
+			<p class="swipe"><span class="bold">Swipe up</span> untuk mengenal kami lebih dekat</p>
+			<img src="Assets/Dream.png">
+			<div class="wwd">
+				<div class="wwd1">
+					<p class="bold">WHAT WE DO ?</p>
+					<p>WHAT WE DO ?</p>
+					<p>WHAT WE DO ?</p>
+				</div>
+				<div class="wwd2">
+					<p>WHAT WE DO ?</p>
+					<p>WHAT WE DO ?</p>
+					<p class="bold">WHAT WE DO ?</p>
+				</div>
+				<div class="wwd3">
+					<p>WHAT WE DO ?</p>
+					<p class="bold">WHAT WE DO ?</p>
+					<p>WHAT WE DO ?</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="next2">
+			<div class="cam reveal">
+				<a href="#">
+					<img src="Assets/Service-1.png">
+					<p>VIDEOGRAFI</p>
+				</a>
+			</div>
+			<div class="desaingrafis reveal"><a href="#"></a>
+				<a href="#">
+					<img src="Assets/Service-2.png">
+					<p>DESAIN GRAFIS</p>
+				</a>
+			</div>
+			<div class="web reveal"><a href="#"></a>
+				<a href="#">
+					<img src="Assets/Service-3.png">
+					<p>WEBSITE</p>
+				</a>
+			</div>
+		</div>
+
+		<div class="video">
+			<div class="title reveal">
+				<p>VIDEO- GRAPHY</p>
+			</div>
+			<div class="content reveal">
+				<p>Layanan pembuatan video untuk kebutuhan promosi dan branding Anda, yang akan memudahkan penyampaian pesan mengenai produk, bisnis, ataupun nilai brand kepada calon konsumen Anda.</p>
+			</div>
+			<a href="https://drive.google.com/file/d/1ZWnqRC1IUhdsxMhX0WU0eGCdVbvHfTRJ/view?usp=share_link"> <div class="explainer1 reveal">
+				<div class="square"></div>
+				<i class="fa-regular fa-circle-play"></i>
+				<p class="text-bold">Explainer UNEEDS</p>
+				<p class="text-reg">Video Animasi</p>
+				<img src="Assets/Vid-1.png">
+			</div> </a>
+			<a href="https://drive.google.com/file/d/1M7Teg42vNTZSUaKPJeT7e1aswDHxU5Mf/view?usp=share_link"> <div class="latihan reveal">
+				<div class="square"></div>
+				<i class="fa-regular fa-circle-play"></i>
+				<p class="text-bold">Latihan HKC</p>
+				<p class="text-reg">Aerial Drone Shoot</p>
+				<img src="Assets/Vid-2.png">
+			</div> </a>
+			<a href="https://drive.google.com/file/d/1AJGZs67aUXLOqtleSKdkz5_Y2AGumdS5/view?usp=share_link"><div class="explainer2 reveal">
+				<div class="square"></div>
+				<i class="fa-regular fa-circle-play"></i>
+				<p class="text-bold">Explainer UNEEDS</p>
+				<p class="text-reg">Desain Grafis</p>
+				<img src="Assets/Vid-3.png">
+			</div> </a>
+		</div>
+
+		<div class="part5">
+			<a href="https://drive.google.com/file/d/1hy5Fxm9bDYznuCgRe6EvcWDLO-WpYoZ3/view?usp=share_link"><img src="Assets/GD-1.png" class="img1 reveal"></a>
+			<a href="https://drive.google.com/file/d/11t8h9aIcgFO5Ll31XxK7Kunql49JuEoN/view?usp=share_link"><img src="Assets/GD-2.png" class="img2 reveal"></a>
+			<a href="https://drive.google.com/file/d/1_R20T6VVX4MadgKw-0P0riEwZYoqJBXD/view?usp=share_link"><img src="Assets/GD-3.png" class="img3 reveal"></a>
+			<p class="title-5 reveal">GRAPHIC DESIGN</p>
+			<p class="p-5 reveal">Visualisasi terbaik dari produk anda mulai dari logo, mockup, banner, flyer, website, hingga seluruh kebutuhan grafis untuk promosi dan branding profil usaha Anda.</p>
+		</div>
+
+		<div class="clients">
+			<img src="Assets/Logo-2.png" class="clients-img reveal">
+			<p class="reveal">OUR AMAZING CLIENTS</p>
+			<div class="inside-clients reveal">
+				<img src="Assets/Partner-1.png">
+				<img src="Assets/Partner-2.png">
+				<img src="Assets/Partner-3.png">
+				<img src="Assets/Partner-4.png">
+				<img src="Assets/Partner-5.png">
+				<img src="Assets/Partner-6.png">
+				<img src="Assets/Partner-7.png">
+			</div>
+		</div>
+
+		<div class="collab">
+			<p class="reveal">LET’S COLLABORATE !</p>
+		</div>
+
+		<footer>
+			<div class="address reveal">
+				<p class="title-address">OUR ADDRESS</p>
+				<p class="content-address">Jl. Melur No.18, RT.12/RW.09 Pondok Bambu, Duren Sawit, Jakarta Timur 13440</p>
+			</div>
+			<div class="followus reveal">
+				<p class="title-followus">FOLLOW US</p>
+				<p class="content-followus">UNEEDS Instagram</p>
+			</div>
+			<div class="contact reveal">
+				<p class="title-contact">CONTACT US</p>
+				<p class="content-contact">+62 856 1877 065</p>
+			</div>
+		</footer>
+
+		<script type="text/javascript">
+			window.addEventListener('scroll', reveal);
+
+			function reveal() {
+				var reveals = document.querySelectorAll('.reveal');
+				for(var i = 0; i < reveals.length; i++) {
+					var windowheight = window.innerHeight;
+					var revealtop = reveals[i].getBoundingClientRect().top;
+					var revealpoint = 150;
+
+					if(revealtop < windowheight - revealpoint) {
+						reveals[i].classList.add('active');
+					}
+					else {
+						reveals[i].classList.remove('active');
+					}
+				}
+			}
+		</script>
+
+	</body>
+</html>
